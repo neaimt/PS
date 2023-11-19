@@ -9,14 +9,14 @@ int main() {
     cin.tie(0);
 
     cin >> X >> Y;
-    Z =  (long double)Y / X  * 100; // 처음 승률
+    Z =  (int)((Y * 100) / X ); // 처음 승률
 
     st = 0;
     en = MAX;
     min_mid = MAX;
     while ( st <= en ) {
         mid = ( st + en ) / 2;
-        Z_ = (long double)( Y + mid ) / ( X + mid ) * 100;
+        Z_ = (int)((( Y + mid ) * 100) / ( X + mid ));
 
         if ( Z_ <= Z )
             st = mid + 1;
